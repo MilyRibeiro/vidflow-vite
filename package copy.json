@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-vidflow-projeto-base",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server --watch backend/videos.json",
+    "lint": "eslint ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "eslint": "^9.30.1",
+    "globals": "^16.3.0",
+    "json-server": "^0.17.4",
+    "prettier": "3.6.2"
+  },
+  "dependencies": {
+    "axios": "^1.10.0"
+  }
+}
