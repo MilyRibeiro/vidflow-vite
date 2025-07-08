@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const urlProducao =
+const urlDeploy =
   "https://gist.githubusercontent.com/antonio-evaldo/e8a63621b51c883931eb3fa3a3eca990/raw/12f5c46ee6dd00d03c051adadaf341e06452cea0/videos.txt";
-const urlDeploy = "http://localhost:3000/videos";
+const urlProducao = "http://localhost:3000/videos";
 const containerVideos = document.querySelector(".videos__container");
 
 async function buscarEMostrarVideos() {
-  const urlVideos = import.meta.env.PROD ? urlProducao : urlDeploy;
+  const urlVideos = import.meta.env.PROD ? urlDeploy : urlProducao;
   console.log(import.meta.env.PROD);
   console.log(urlVideos);
 
