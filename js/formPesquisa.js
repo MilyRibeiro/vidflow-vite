@@ -2,6 +2,10 @@ const formPesquisa = document.querySelector('.form__pesquisa');
 
 formPesquisa.addEventListener('submit', (evento) => {
   evento.preventDefault();
+
+  const primeiroVideoFiltrado = document.querySelector(".videos__item:not(.escondido)");
+
+  primeiroVideoFiltrado?.focus();
 });
 
 const barraDePesquisa = document.querySelector(".pesquisar__input");
@@ -21,6 +25,6 @@ function filtrarPesquisa() {
   } else {
     for (const video of videos) {
       video.classList.remove("escondido");
-    }
-  }
-}
+    };
+  };
+};
