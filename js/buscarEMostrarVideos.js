@@ -8,7 +8,7 @@ async function buscarEMostrarVideos() {
     videos.forEach((video) => {
       if (video.categoria === "") {
         throw new Error('Vídeo não tem categoria');
-      }
+      };
       containerVideos.innerHTML += `
         <li class="videos__item">
             <iframe src="${video.url}" title="${video.titulo}" frameborder="0" allowfullscreen></iframe>
@@ -24,10 +24,10 @@ async function buscarEMostrarVideos() {
             </div>
         </li>
       `;
-    })
+    });
   } catch (error) {
     containerVideos.innerHTML = `<p> Houve um erro ao carregar os vídeos: ${error}</p>`
-  }
+  };
 }
 
 buscarEMostrarVideos();
